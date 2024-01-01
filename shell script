@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if systemctl is-active --quiet httpd.service; then
+    echo "httpd is running."
+else
+    echo "httpd is not running. Starting httpd..."
+    sudo systemctl start httpd.service
+fi
